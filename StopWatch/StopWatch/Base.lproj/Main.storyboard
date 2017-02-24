@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,20 +22,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWW-QD-fzf">
-                                <rect key="frame" x="66" y="569" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWW-QD-fzf">
+                                <rect key="frame" x="106" y="569" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="Start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zfm-Rt-ena"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-bd-9oV">
-                                <rect key="frame" x="271" y="569" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="Stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSc-zP-99e"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stopwatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twi-8J-G0X">
@@ -49,12 +41,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A6-bd-9oV">
+                                <rect key="frame" x="236" y="569" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="Stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSc-zP-99e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4A6-bd-9oV" secondAttribute="trailing" constant="91" id="1Lc-au-d7G"/>
                             <constraint firstItem="Twi-8J-G0X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Bz-9o-FZj"/>
-                            <constraint firstItem="97Y-TP-a2e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="294" id="4bt-zB-xhn"/>
+                            <constraint firstItem="97Y-TP-a2e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Xt-YT-ths"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xWW-QD-fzf" secondAttribute="bottom" constant="68" id="FsP-1h-uzx"/>
                             <constraint firstItem="Twi-8J-G0X" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="Mc7-OI-lzd"/>
+                            <constraint firstItem="xWW-QD-fzf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="90" id="SPo-4t-qIx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4A6-bd-9oV" secondAttribute="bottom" constant="68" id="jbU-Im-7KZ"/>
                             <constraint firstItem="97Y-TP-a2e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mWJ-BS-c1E"/>
                         </constraints>
                     </view>
